@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>DDslick2</title>
+    
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://dl.dropboxusercontent.com/u/40036711/Scripts/jquery.ddslick.min.js"></script>
+
+    
+    </style>
+    
+
+    
+    <script>
+        $(document).ready(function(){
+       $('#myDropdown').ddslick({
+    onSelected: function(selectedData){
+        //callback function: do something with selectedData;
+    }   
+});
+       $('select[name="SelectURL"]').change(function() {
+    window.location.replace($(this).val());
+});
+});
+
+    </script>
+    
+</head>
+
+<body>
+
+<FORM NAME="nav">
+    <DIV>
+        <SELECT NAME="SelectURL" id="myDropdown">
+            <OPTION VALUE="http://www.cs.tut.fi/~jkorpela/forms/jsnav.html" SELECTED>Please select an item:</OPTION>
+            <OPTION VALUE="http://www.facebook.com" target="_blank"> Facebook</OPTION>
+            <OPTION VALUE="http://www.cs.tut.fi/~jkorpela/forms/choices.html"> Choices in HTML forms</OPTION>
+            <OPTION VALUE="http://www.cs.tut.fi/~jkorpela/forms/tables.html"> Tables and forms</OPTION>
+            <OPTION VALUE="http://www.cs.tut.fi/~jkorpela/forms/methods.html"> Form submission methods (GET and POST)</OPTION>
+        </SELECT>
+    <DIV>
+</FORM>
+
+
+
+
+</body>
+</html>

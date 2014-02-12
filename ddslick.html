@@ -19,7 +19,8 @@ var ddData = [
         value: 1,
         selected: false,
         description: "Check out my Facebook Page",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/facebook-icon-32.png"
+        imageSrc: "http://dl.dropbox.com/u/40036711/Images/facebook-icon-32.png",
+        windowlocation: "http://google.com"
     },
     {
         text: "Twitter",
@@ -43,19 +44,15 @@ var ddData = [
         imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
     }
 ];
-    </script>
     
-    <script>
         $(document).ready(function(){
-       $('#demoBasic').ddslick({
-    data:ddData,
-    width:300,
-    selectText: "Select your preferred social network",
-    imagePosition:"left",
-    onSelected: function(selectedData){
-        //callback function: do something with selectedData;
-    }
-
+       $('#demoCallback').ddslick({
+    data: ddData,
+    width: 300,
+    selectText: "Select your favorite social network",
+    onSelected: function(){
+        window.location = "http://google.com";}
+    
 });
         });
     </script>
@@ -63,7 +60,8 @@ var ddData = [
 </head>
 
 <body>
-<div id="demoBasic">
+<div id="demoCallback">
+
 
 </div>
 
