@@ -20,37 +20,41 @@ var ddData = [
         selected: false,
         description: "Check out my Facebook Page",
         imageSrc: "http://dl.dropbox.com/u/40036711/Images/facebook-icon-32.png",
+        url: "http://www.facebook.com"
     },
     {
         text: "Twitter",
         value: 2,
         selected: false,
         description: "Description with Twitter",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
+        imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png",
+        url: "http://www.twitter.com"
     },
     {
         text: "LinkedIn",
         value: 3,
         selected: false,
         description: "Description with LinkedIn",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png"
+        imageSrc: "http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png",
+        url: "http://www.linkedin.com"
     },
     {
         text: "Foursquare",
         value: 4,
         selected: false,
         description: "Description with Foursquare",
-        imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+        imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png",
+        url: "http://www.foursquare.com"
     }
 ];
     
         $(document).ready(function(){
-       $('#demoCallback').ddslick({
+       $('#myDropdown').ddslick({
     data: ddData,
     width: 300,
     selectText: "Select your favorite social network",
-    onSelected: function(){
-        window.location = "http://facebook.com";}
+    onSelected: function (data) {
+        window.location = data.selectedData.url;}
     
 });
         });
@@ -59,7 +63,7 @@ var ddData = [
 </head>
 
 <body>
-<div id="demoCallback">
+<div id="myDropdown">
 
 
 </div>

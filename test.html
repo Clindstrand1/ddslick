@@ -19,11 +19,14 @@
        $('#myDropdown').ddslick({
     onSelected: function(selectedData){
         //callback function: do something with selectedData;
-    }   
+    
+    $('#ddSlick-Default-Links').ddslick({
+    width: '100%',
+    onSelected: function(selectedData) { },
+    defaultTarget: "_blank"
 });
-       $('select[name="SelectURL"]').change(function() {
-    window.location.replace($(this).val());
 });
+       
 });
 
     </script>
@@ -31,18 +34,12 @@
 </head>
 
 <body>
+<select id="ddSlick-Default-Links" class="dropdown">
+    <option value="0" data-href="http://www.facebook.com/rem.mcintosh/" data-imagesrc="http://cdn1.iconfinder.com/data/icons/inside/PNG/032x032/icontexto-inside-facebook.png" data-description="Description with Facebook">Facebook</option>
+    <option value="1" data-href="http://www.facebook.com/rem.mcintosh/" data-imagesrc="http://cdn1.iconfinder.com/data/icons/inside/PNG/032x032/icontexto-inside-facebook.png" data-description="Description with Facebook">Facebook</option>
 
-<FORM NAME="nav">
-    <DIV>
-        <SELECT NAME="SelectURL" id="myDropdown">
-            <OPTION VALUE="http://www.cs.tut.fi/~jkorpela/forms/jsnav.html" SELECTED>Please select an item:</OPTION>
-            <OPTION VALUE="http://www.facebook.com" target="_blank"> Facebook</OPTION>
-            <OPTION VALUE="http://www.cs.tut.fi/~jkorpela/forms/choices.html"> Choices in HTML forms</OPTION>
-            <OPTION VALUE="http://www.cs.tut.fi/~jkorpela/forms/tables.html"> Tables and forms</OPTION>
-            <OPTION VALUE="http://www.cs.tut.fi/~jkorpela/forms/methods.html"> Form submission methods (GET and POST)</OPTION>
-        </SELECT>
-    <DIV>
-</FORM>
+</select>
+
 
 
 
